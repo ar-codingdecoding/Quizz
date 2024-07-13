@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Get into Quiz</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="start-screen">
+        <h1 class="heading">Get Into Quiz</h1>
+        <div class="settings">
+          <label for="questions-count">Count of Questions:</label>
+          <select id="questions-count">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+          </select>
+          <hr>
+          <label for="subject">Select Your Subject:</label>
+          <select id="subject">
+            <option value="9">general knowledge</option>
+            <option value="10">books</option>
+            <option value="11">films</option>
+            <option value="12">music</option>
+            <option value="14">television</option>
+            <option value="15">video games</option>
+            <option value="17">science and nature</option>
+            <option value="18">computers</option>
+            <option value="19">mathematics</option>
+            <option value="20">mythology</option>
+            <option value="21">sports</option>
+            <option value="22">geography</option>
+            <option value="23">history</option>
+          </select>
+          <hr>
+          <label for="level">Select Your Level:</label>
+          <select id="level">
+            <option value="easy">easy</option>
+            <option value="medium">medium</option>
+            <option value="hard">hard</option>
+          </select>
+          <hr>
+          <label for="time">Select clock/question:</label>
+          <select id="time">
+            <option value="10">10 seconds</option>
+            <option value="15">15 seconds</option>
+            <option value="20">20 seconds</option>
+            <option value="25">25 seconds</option>
+            <option value="30">30 seconds</option>
+            <option value="60">60 seconds</option>
+          </select>
+        </div>
+        <button class="btn start">Start Quiz</button>
+      </div>
+      <div class="quiz hide">
+        <div class="timer">
+          <div class="progress">
+            <div class="progress-bar" id="progress-bar"></div>
+            <span class="progress-text" id="progress-text"></span>
+          </div>
+        </div>
+        <div class="question-wrapper">
+          <div class="number">
+            Question <span class="current">1</span>
+            <span class="total">/10</span>
+          </div>
+          <div class="question">question section</div>
+        </div>
+        <div class="answer-wrapper">
+          <div class="answer selected" id="selectedAnswer">
+            <span class="text">answer</span>
+            <span class="checkbox">
+              <i class="fas fa-check"></i>
+            </span>
+          </div>
+        </div>
+        <div class="set_button">
+          <button class="btn quit">Quit</button>
+          <button class="btn submit" disabled>Submit</button>
+          <button class="btn next">Next</button>
+        </div>
+      </div>
+      <div class="end-screen hide">
+        <h1 class="heading">Get Into Quiz</h1>
+        <div class="score">
+          <span class="score-text">Correct Answers:</span>
+          <div>
+            <span class="final-score">0</span>
+            <span class="total-score">/10</span>
+          </div>
+        </div>
+        <button class="btn restart">Restart Quiz</button>
+      </div>
+      <p class="copyright">Copyright &copy by Aayush(NeedlessCat)</p>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
